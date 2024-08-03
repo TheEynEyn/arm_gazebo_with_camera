@@ -1,0 +1,8 @@
+prefix=/home/hussein/ControlArm/install
+
+Name: movit_robot_arm_sim
+Description: Description of movit_robot_arm_sim
+Version: 0.3.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

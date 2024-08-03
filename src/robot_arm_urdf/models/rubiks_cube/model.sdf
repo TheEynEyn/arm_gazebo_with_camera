@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+<!--
+This SDF file was automatically generated using a template modified 
+and authored by Adwait Naik. The moment of interia is not supposed to be changed.
+-->
+    <model name="rubiks_cube">
+      <pose>0 0 0 0 0 0</pose> 
+      <link name="link">
+        <inertial>
+          <inertia>
+           <ixx>9.85204038073643e-08</ixx>
+           <ixy>-8.061824208102976e-24</ixy>
+           <ixz>2.097640522420731e-24</ixz>
+           <iyy>9.833577391876143e-08</iyy>
+           <iyz>-2.1321925661475815e-23</iyz>
+           <izz>9.818197457535545e-08</izz>
+          </inertia>
+          <mass>0.00018287731685751214</mass>
+        </inertial>
+        <collision name="collision">
+          <geometry>
+          	<mesh>
+             <uri>textured.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+
+        <visual name="visual">
+          <geometry>
+          	<mesh>
+            <uri>textured.dae</uri>
+	        </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+</sdf>

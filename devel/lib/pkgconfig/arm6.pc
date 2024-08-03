@@ -1,0 +1,8 @@
+prefix=/home/hussein/ControlArm/devel
+
+Name: arm6
+Description: Description of arm6
+Version: 0.3.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

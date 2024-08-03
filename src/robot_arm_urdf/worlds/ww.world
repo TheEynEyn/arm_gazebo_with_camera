@@ -1,0 +1,387 @@
+<?xml version="1.0" ?>
+<sdf version='1.7'>
+  <world name='default'>
+    <physics type='ode'>
+      <ode>
+        <solver>
+          <type>quick</type>
+          <iters>100</iters>
+          <sor>1</sor>
+          <use_dynamic_moi_rescaling>0</use_dynamic_moi_rescaling>
+        </solver>
+        <constraints>
+          <cfm>0</cfm>
+          <erp>0.9</erp>
+          <contact_max_correcting_vel>0.1</contact_max_correcting_vel>
+          <contact_surface_layer>0</contact_surface_layer>
+        </constraints>
+      </ode>
+      <real_time_update_rate>1000</real_time_update_rate>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+    </physics>
+    <scene>
+      <sky>
+        <clouds>
+          <speed>12</speed>
+        </clouds>
+      </sky>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.25 0.25 0.25 1</background>
+      <shadows>1</shadows>
+      <boundary>
+        <min>-5.0 -5.0 0</min>
+        <max>5.0 5.0 50</max>
+      </boundary>
+    </scene>
+    <model name='ground_plane'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>10 10</size>
+            </plane>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='grass'>
+          <pose>0 0 0 0 -0 0</pose>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>10 10</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grass</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <model name='peach'>
+      <frame name='peach::__model__' attached_to='peach::link'>
+        <pose relative_to='__model__'>1 0 0 0 -0 0</pose>
+      </frame>
+      <link name='peach::link'>
+        <inertial>
+          <inertia>
+            <ixx>4.58765e-08</ixx>
+            <ixy>-6.82467e-24</ixy>
+            <ixz>4.97606e-24</ixz>
+            <iyy>4.44404e-08</iyy>
+            <iyz>-3.03756e-24</iyz>
+            <izz>4.09827e-08</izz>
+          </inertia>
+          <mass>0.000117214</mass>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>/home/hussein/catkin_ws/src/iq_sim/models/peach/textured.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>/home/hussein/catkin_ws/src/iq_sim/models/peach/textured.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose relative_to='peach::__model__'>0 0 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link'>
+        <pose>0.6 -1 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+        <velocity>0.000487 -0.000355 0.007348 -0.088469 -0.12125 3e-06</velocity>
+        <acceleration>0.555999 -0.334827 15.3356 0.693333 0.854298 1.6179</acceleration>
+        <wrench>6.5e-05 -3.9e-05 0.001798 0 -0 0</wrench>
+      </link>
+    </model>
+    <model name='rubiks_cube'>
+      <frame name='rubiks_cube::__model__' attached_to='rubiks_cube::link'>
+        <pose relative_to='__model__'>1 2 3 0 -0 0</pose>
+      </frame>
+      <link name='rubiks_cube::link'>
+        <inertial>
+          <inertia>
+            <ixx>9.85204e-08</ixx>
+            <ixy>-8.06182e-24</ixy>
+            <ixz>2.09764e-24</ixz>
+            <iyy>9.83358e-08</iyy>
+            <iyz>-2.13219e-23</iyz>
+            <izz>9.8182e-08</izz>
+          </inertia>
+          <mass>0.000182877</mass>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>/home/hussein/catkin_ws/src/iq_sim/models/rubiks_cube/textured.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>/home/hussein/catkin_ws/src/iq_sim/models/rubiks_cube/textured.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose relative_to='rubiks_cube::__model__'>0 0 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <model name='potted_meat_can'>
+      <frame name='potted_meat_can::__model__' attached_to='potted_meat_can::link'>
+        <pose relative_to='__model__'>1 2 2 0 -0 0</pose>
+      </frame>
+      <link name='potted_meat_can::link'>
+        <inertial>
+          <inertia>
+            <ixx>4.28737e-07</ixx>
+            <ixy>-2.02031e-23</ixy>
+            <ixz>-4.82341e-24</ixz>
+            <iyy>3.22809e-07</iyy>
+            <iyz>-5.3025e-25</iyz>
+            <izz>2.49254e-07</izz>
+          </inertia>
+          <mass>0.000354132</mass>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>/home/hussein/catkin_ws/src/iq_sim/models/potted_meat_can/textured.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>/home/hussein/catkin_ws/src/iq_sim/models/potted_meat_can/textured.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose relative_to='potted_meat_can::__model__'>0 0 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <gravity>0 0 -9.8</gravity>
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <wind/>
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <latitude_deg>0</latitude_deg>
+      <longitude_deg>0</longitude_deg>
+      <elevation>0</elevation>
+      <heading_deg>0</heading_deg>
+    </spherical_coordinates>
+    <model name='soccer_ball'>
+      <static>0</static>
+      <link name='soccer_ball_link'>
+        <pose>0 0 0 0 -0 0</pose>
+        <inertial>
+          <mass>0.026</mass>
+          <inertia>
+            <ixx>1.664e-05</ixx>
+            <iyy>1.664e-05</iyy>
+            <izz>1.664e-05</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <sphere>
+              <radius>0.04</radius>
+            </sphere>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>0.04 0.04 0.04</scale>
+              <uri>model://robocup_3Dsim_ball/meshes/ball.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>0.331332 0.368162 0 0 -0 0</pose>
+    </model>
+    <state world_name='default'>
+      <sim_time>434 737000000</sim_time>
+      <real_time>470 362998801</real_time>
+      <wall_time>1719171456 320321706</wall_time>
+      <iterations>434737</iterations>
+      <model name='ground_plane'>
+        <pose>0 0 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>0 0 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='peach'>
+        <pose>-0.406014 -0.321612 0.415721 0.280194 0.433155 0.578424</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>-10067 37384.9 -909703 -0.46671 0.726212 -2.00252</pose>
+          <velocity>0 0 -4260.42 0 -0 0</velocity>
+          <acceleration>0 0 -9.8 0 -0 0</acceleration>
+          <wrench>0 0 -9.8 0 -0 0</wrench>
+        </link>
+        <link name='peach::link'>
+          <pose>0.353981 0.174603 -0.004016 0.280194 0.433155 0.578424</pose>
+          <velocity>0.000128 -2.7e-05 -6e-06 -0.00677 -0.031808 0</velocity>
+          <acceleration>0.017359 -0.003695 -0.000794 2.24287 1.13602 3.07327</acceleration>
+          <wrench>2e-06 -0 -0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='potted_meat_can'>
+        <pose>2.3035 0.994464 2.06338 -1.51779 0.217622 2.40403</pose>
+        <scale>1 1 1</scale>
+        <link name='potted_meat_can::link'>
+          <pose>0.468722 -0.180068 0.000845 -1.51779 0.217622 2.40403</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 -9.8 7e-06 2.6e-05 7.8e-05</acceleration>
+          <wrench>0 0 -0.00347 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='rubiks_cube'>
+        <pose>-0.502727 -2.49889 -2.98979 -8.8e-05 0.00973 0.094026</pose>
+        <scale>1 1 1</scale>
+        <link name='rubiks_cube::link'>
+          <pose>0.334069 -0.41084 0.000161 -8.8e-05 0.00973 0.094026</pose>
+          <velocity>8e-06 -4e-05 -0.001182 0.234006 0.045509 1.1e-05</velocity>
+          <acceleration>0.015321 -0.078243 -2.29047 0.225733 -0.291423 0.061537</acceleration>
+          <wrench>3e-06 -1.4e-05 -0.000419 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='soccer_ball'>
+        <pose>0.331332 0.368162 0.04 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='soccer_ball_link'>
+          <pose>0.331332 0.368162 0.04 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+    </state>
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose>5.25198 -3.77805 2.77062 0 0.275643 2.35619</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+  </world>
+</sdf>

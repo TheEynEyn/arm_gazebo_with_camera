@@ -1,0 +1,8 @@
+prefix=/home/hussein/ControlArm/install
+
+Name: arm2
+Description: Description of arm2
+Version: 0.3.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

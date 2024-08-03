@@ -1,0 +1,8 @@
+prefix=/home/hussein/ControlArm/install
+
+Name: hgfd
+Description: Description of hgfd
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

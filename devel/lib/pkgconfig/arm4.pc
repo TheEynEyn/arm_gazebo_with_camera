@@ -1,0 +1,8 @@
+prefix=/home/hussein/ControlArm/devel
+
+Name: arm4
+Description: Description of arm4
+Version: 0.3.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
