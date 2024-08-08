@@ -35,7 +35,12 @@ This project involves a motion-planning robot simulated in the Gazebo environmen
     sudo apt-get install ros-noetic-ros-control ros-noetic-ros-controllers
 
     ```
-3. Build the ROS workspace:
+3. add these lines to your .bashrc
+    ```bash
+export GAZEBO_MODEL_PATH=~/ControlArm/src/robot_arm_urdf/models:${GAZEBO_MODEL_PATH}
+export GAZEBO_MODEL_PATH=~/ControlArm/src/robot_arm_urdf/worlds:${GAZEBO_MODEL_PATH}
+   ```
+4. Build the ROS workspace:
     ```bash
     catkin_make
     source devel/setup.bash
@@ -45,7 +50,7 @@ This project involves a motion-planning robot simulated in the Gazebo environmen
 
 1. **Launch the Gazebo simulation:**
     ```bash
-    roslaunch motion_planning_robot simulation.launch
+    roslaunch arm6 full_RvizGazebo.launch
     ```
 2. **Run the command interface for 'vision' package:**
     ```bash
@@ -54,7 +59,7 @@ This project involves a motion-planning robot simulated in the Gazebo environmen
 
 3. **After that, run the following command to move the robot to the desired object:**
     ```bash
-    rosrun arm node_set_predefined.py
+    rosrun arm6 node_set_predefined.py
     ```
 4. **Send a command (name of object):**
    - Type the name of the object you want the robot to locate, including `rubik`,`can`,`peach` and `ball` and press Enter.
