@@ -53,7 +53,7 @@ This project involves a motion-planning robot simulated in the Gazebo environmen
     ```
 
 3. **After that, run the following command to move the robot to the desired object:**
-       ```bash
+    ```bash
     rosrun arm node_set_predefined.py
     ```
 4. **Send a command (name of object):**
