@@ -66,7 +66,9 @@ Contributions are welcome! Please open an issue or submit a pull request for any
 
 ## Authors
 
--[Armin Attarzadeh](https://github.com/ArminAttarzadeh)
--[Kianoush Abbaslou](https://github.com/Jeremy-capdevilla)
+## Authors
+
+- [Armin Attarzadeh](https://github.com/ArminAttarzadeh)  
+- [Kianoush Abbaslou](https://github.com/Jeremy-capdevilla)
 
 Spring 2024
