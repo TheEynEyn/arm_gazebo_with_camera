@@ -56,8 +56,9 @@ This project involves a motion-planning robot simulated in the Gazebo environmen
 
 ## Customization
 
-- **Template Matching:** Modify the template images in the `templates/` directory to add or update the objects the robot can recognize.
-- **Motion Planning:** Adjust the motion planning parameters in the MoveIt configuration files to tweak the robot's movement behavior.
+- **Template Matching:** The cropped template images used for object recognition can be found `../src/vision/cropped_image`. You can modify or replace these images to recognize different objects.
+- **Motion Planning:** Adjust the motion planning parameters in the MoveIt configuration files to tweak the robot's movement behavior. 
+- **Object Positions:** You can change the positions of the objects within the simulation by editing the world.sdf file. This file contains the definitions for the objects in the Gazebo world, allowing you to adjust their initial placement as needed.
 
 ## Contributing
 
@@ -65,7 +66,7 @@ Contributions are welcome! Please open an issue or submit a pull request for any
 
 ## Authors
 
-Armin Attarzadeh
-Kianoush Abbaslou
+Armin Attarzadeh(https://github.com/ArminAttarzadeh)
+Kianoush Abbaslou(https://github.com/Jeremy-capdevilla)
 
 Spring 2024
