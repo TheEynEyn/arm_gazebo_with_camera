@@ -1,5 +1,5 @@
 
-# Motion-Planning Robot in Gazebo
+# Motion-Planning Robot in Gazebo with Camera
 
 ## Overview
 
@@ -18,16 +18,21 @@ This project involves a motion-planning robot simulated in the Gazebo environmen
 - [Gazebo](http://gazebosim.org/) simulator.
 - [MoveIt](https://moveit.ros.org/) installed and configured.
 - Python 3.6+ or equivalent for running the command interface.
+- OpenCV library for object detection
 
 ### Installation
 1. Clone this repository:
     ```bash
-    git clone https://github.com/your-repo-name/motion-planning-robot.git
-    cd motion-planning-robot
+    git clone https://github.com/TheEynEyn/arm_gazebo_with_camera.git
+    cd arm_gazebo_with_camera
     ```
 2. Install dependencies:
+    Assume ROS Noetic and Gazebo 11 are already installed on your system.
     ```bash
-    pip install -r requirements.txt
+    sudo apt install ros-noetic-moveit
+    sudo apt install ros-noetic-rviz
+    sudo apt-get install ros-noetic-ros-control ros-noetic-ros-controllers
+
     ```
 3. Build the ROS workspace:
     ```bash
@@ -41,7 +46,7 @@ This project involves a motion-planning robot simulated in the Gazebo environmen
     ```bash
     roslaunch motion_planning_robot simulation.launch
     ```
-2. **Run the command interface:**
+2. **Run the command interface for 'vision' package:**
     ```bash
     python3 command_interface.py
     ```
@@ -58,6 +63,9 @@ This project involves a motion-planning robot simulated in the Gazebo environmen
 
 Contributions are welcome! Please open an issue or submit a pull request for any improvements or new features.
 
-## License
+## Authors
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Armin Attarzadeh
+Kianoush Abbaslou
+
+Spring 2024
