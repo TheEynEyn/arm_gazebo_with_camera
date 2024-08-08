@@ -37,9 +37,11 @@ This project involves a motion-planning robot simulated in the Gazebo environmen
     ```
 3. add these lines to your .bashrc
     ```bash
-export GAZEBO_MODEL_PATH=~/ControlArm/src/robot_arm_urdf/models:${GAZEBO_MODEL_PATH}
-export GAZEBO_MODEL_PATH=~/ControlArm/src/robot_arm_urdf/worlds:${GAZEBO_MODEL_PATH}
-   ```
+    export GAZEBO_MODEL_PATH=~/ControlArm/src/robot_arm_urdf/models:${GAZEBO_MODEL_PATH}
+    export GAZEBO_MODEL_PATH=~/ControlArm/src/robot_arm_urdf/worlds:${GAZEBO_MODEL_PATH}
+
+
+    ```
 4. Build the ROS workspace:
     ```bash
     catkin_make
