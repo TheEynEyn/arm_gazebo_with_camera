@@ -64,11 +64,9 @@ This project involves a motion-planning robot simulated in the Gazebo environmen
 
 Contributions are welcome! Please open an issue or submit a pull request for any improvements or new features.
 
-## Authors
 
 ## Authors
 
 - [Armin Attarzadeh](https://github.com/ArminAttarzadeh)  
 - [Kianoush Abbaslou](https://github.com/Jeremy-capdevilla)
-
-Spring 2024
+- Spring 2024
