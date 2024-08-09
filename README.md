@@ -8,7 +8,7 @@ This project involves a motion-planning robot simulated in the Gazebo environmen
 ### Usage Demo
 
 1. **Final Result**  
-   <img src="./examples/result_gif.gif" alt="arm" width="400" />
+   <img src="./examples/result_gif.gif" alt="arm" width="800" />
 
 2. **Object Detection**  
    <img src="./examples/template_matching.png" alt="detection" width="400" />
