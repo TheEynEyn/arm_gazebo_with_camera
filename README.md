@@ -5,10 +5,10 @@
 
 This project involves a motion-planning robot simulated in the Gazebo environment. The robot is equipped with a camera that uses template matching to identify and locate specific objects within the environment. Once an object is identified, the robot navigates towards it.
 
-### The Environment
+### Usage Demo
 
-1. **Our Arm Robot**  
-   <img src="./examples/controlarm10.png" alt="arm" width="400" />
+1. **Final Result**  
+   <img src="./examples/result_gif.gif" alt="arm" width="400" />
 
 2. **Object Detection**  
    <img src="./examples/template_matching.png" alt="detection" width="400" />
@@ -75,9 +75,6 @@ This project involves a motion-planning robot simulated in the Gazebo environmen
 4. **Send a command (name of object):**
    - Type the name of the object you want the robot to locate, including `rubik`,`can`,`peach` and `ball` and press Enter.
    - The robot will identify the object using template matching, plan a path, and move towards it.
-### Demo Video 
-
-[Watch the demo video](./examples/result.mp4)
 
 ## Customization
 
