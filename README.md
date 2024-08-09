@@ -5,6 +5,14 @@
 
 This project involves a motion-planning robot simulated in the Gazebo environment. The robot is equipped with a camera that uses template matching to identify and locate specific objects within the environment. Once an object is identified, the robot navigates towards it.
 
+### Running Examples
+
+1. **our Arm Robot**
+   ![arm](./examples/controlarm10.png)
+
+2. **Object Detection**
+   ![detection](./examples/template_matching.png)
+
 ### Key Features
 - **MoveIt Integration:** The project leverages the MoveIt Assistant for motion planning and control, ensuring smooth and efficient movements.
 - **Motion Planning:** Once an object is recognized, the robot plans and executes a path to approach the object.
