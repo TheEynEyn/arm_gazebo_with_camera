@@ -1,9 +1,9 @@
 
-# Motion-Planning Robot in Gazebo with Camera
+# Motion-Planning Robot in Gazebo with Camera (ROS Noetic)
 
 ## Overview
 
-This project involves a motion-planning robot simulated in the Gazebo environment. The robot is equipped with a camera that uses template matching to identify and locate specific objects within the environment. Once an object is identified, the robot navigates towards it.
+This project involves a motion-planning robot simulated in the Gazebo environment. The robot is equipped with a camera that uses template matching to identify and locate specific objects within the environment. Once an object is identified, the robot navigates toward it.
 
 ### Usage Demo
 
@@ -25,7 +25,7 @@ This project involves a motion-planning robot simulated in the Gazebo environmen
 
 ### Prerequisites
 - [ROS (Robot Operating System)](http://www.ros.org/) installed.
-- [Gazebo](http://gazebosim.org/) simulator.
+- [Gazebo](http://gazebosim.org/) simulator installed.
 - [MoveIt](https://moveit.ros.org/) installed and configured.
 - Python 3.6+ or equivalent for running the command interface.
 - OpenCV library for object detection
@@ -37,7 +37,7 @@ This project involves a motion-planning robot simulated in the Gazebo environmen
     cd arm_gazebo_with_camera
     ```
 2. Install dependencies:
-    Assume ROS Noetic and Gazebo 11 are already installed on your system.
+    Ensure ROS Noetic and Gazebo 11 are already installed on your system.
     ```bash
     sudo apt install ros-noetic-moveit
     sudo apt install ros-noetic-rviz
