@@ -61,7 +61,7 @@ This project involves a motion-planning robot simulated in the Gazebo environmen
 
 1. **Launch the Gazebo simulation:**
     ```bash
-    roslaunch arm6 full_RvizGazebo.launch
+    roslaunch arm full_RvizGazebo.launch
     ```
 2. **Run the command interface for 'vision' package:**
     ```bash
@@ -70,7 +70,7 @@ This project involves a motion-planning robot simulated in the Gazebo environmen
 
 3. **After that, run the following command to move the robot to the desired object:**
     ```bash
-    rosrun arm6 node_set_predefined.py
+    rosrun arm node_set_predefined.py
     ```
 4. **Send a command (name of object):**
    - Type the name of the object you want the robot to locate, including `rubik`,`can`,`peach` and `ball` and press Enter.
